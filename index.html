@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="dashboard.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+      progress {
+        height: 45px;
+      }
+
+      progress::-webkit-progress-bar {
+        background-color: #eee;
+        border-radius: 5px;
+      }
+
+      progress::-webkit-progress-value {
+        background-color: #337ab7;
+        border-radius: 5px;
+      }
+
+      progress::-moz-progress-bar {
+        background-color: #337ab7;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar navbar-dark bg-primary">
+      <span class="navbar-brand mb-0 h1"
+        >Dashboard Ketersediaan Kategori Makanan di Berbagai Wilayah</span
+      >
+      <p class="navbar-brand mb-0 text-right" style="font-size: 12pt">
+        Dharu Aulia Rahman
+      </p>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 mt-4">
+          <div class="card">
+            <div class="card-header">Bar Chart Keseluruhan</div>
+            <div class="card-body">
+              <div class="text-center" id="chart1"></div>
+            </div>
+          </div>
+          <div style="display: flex">
+            <div class="card mt-4" style="width: 50%">
+              <div class="card-header">
+                Total Kategori Makanan di Wilayah East
+              </div>
+              <div class="card-body">
+                <div id="number1"></div>
+                <div class="mt-2" style="display: flex">
+                  <p class="mt-2">0</p>
+                  <progress
+                    class="ml-4 mr-4"
+                    style="width: 100%"
+                    id="progress1"
+                    max="10000"
+                  ></progress>
+                  <p class="mt-2">10000</p>
+                </div>
+              </div>
+            </div>
+            <div class="card mt-4 ml-4" style="width: 50%">
+              <div class="card-header">
+                Total Kategori Makanan di Wilayah West
+              </div>
+              <div class="card-body">
+                <div id="number2"></div>
+                <div class="mt-2" style="display: flex">
+                  <p class="mt-2">0</p>
+                  <progress
+                    class="ml-4 mr-4"
+                    style="width: 100%"
+                    id="progress2"
+                    max="0"
+                  ></progress>
+                  <p class="mt-2">10000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mt-4">
+            <div class="card-header">Pie Chart East</div>
+            <div class="card-body">
+              <div class="text-center" id="chart2"></div>
+            </div>
+          </div>
+          <div class="card mt-4">
+            <div class="card-header">Pie Chart Barat</div>
+            <div class="card-body">
+              <div class="text-center" id="chart3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
